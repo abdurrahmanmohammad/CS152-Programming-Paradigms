@@ -1,0 +1,19 @@
+def pi = 3.14
+def pi2 = {def x = 2; 2 * pi}
+write(pi2)
+def fun1 = lambda(x, y) 3 * x + 2 * y
+fun1(5, 7)
+def tri = lambda(n) if (n == 0) 0 else n + tri(n - 1)
+tri(5)
+tri(6)
+def square = lambda(x) x * x
+def addx = lambda(x) lambda(y) x + y
+def add5 = addx(5)
+add5(9)
+def compose = lambda(f, g) lambda(z) f(g(z))
+def add5square = compose(square, add5)
+add5square(3)
+def fun2 = {def x = 10; lambda(y) x * y}
+fun2(5.5)
+def fun3 = lambda (y) { def x = 10; x * y}
+fun3(5.5)

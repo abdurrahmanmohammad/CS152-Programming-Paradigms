@@ -1,0 +1,34 @@
+def count = var(0)
+count
+[count]
+count := [count] + 1
+count
+
+count + 1
+
+def pcount = var(count)
+pcount
+[[pcount]]
+
+
+def scores = store(85, 23, 99, 56)
+scores
+addLast(70, scores)
+scores
+contains(50, scores)
+get(1, scores)
+size(scores)
+put(60, 2, scores)
+scores
+def scores2 = map(lambda(x) x + 1, scores)
+scores2
+scores
+filter(lambda(x) 70 < x, scores2)
+
+while ([count] < 10) { write("calling incCount");count := [count] + 1 }
+
+def tri = lambda (n) { def result = var(0); def count = var(0); while([count] < n + 1) {  result := [result] + [count];  count := [count] + 1 }; [result] }
+tri(5)
+tri(6)
+
+

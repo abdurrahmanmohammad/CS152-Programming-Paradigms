@@ -1,0 +1,35 @@
+{1; 2; 3} + {4; 5; 6}
+def cube = lambda (x) x * x * x
+cube(3 + 2)
+def f2c = lambda (ft) {def c = 0.55; c * (ft - 32)}
+f2c(212)
+f2c(98.6)
+f2c(32)
+f2c(-40)
+40.0
+c
+
+def timesN = lambda(n) lambda (x) n * x
+def times5 = timesN(5)
+times5(3 + 2)
+def compose = lambda(f, g) lambda (x) f(g(x))
+def twiceCube = compose(lambda(x) 2 * x, cube)
+twiceCube(10)
+twiceCube(5)
+
+def fact = lambda(n) if (n == 0) 1 else n * fact(n - 1)
+fact(5)
+fact(6)
+
+def abs = lambda(x) if (x < 0) -1 * x else x
+abs(-9)
+def delta = 100
+def isSmall = {def delta = 0.00001; lambda(x) abs(x) < delta}
+isSmall(99)
+isSmall(-99)
+isSmall(0.000009)
+delta
+
+{write(1); write(2); write(3); 1 + 2 + 3}
+{def x = 1; def y = 2; def z = 3; x + y + z}
+x
